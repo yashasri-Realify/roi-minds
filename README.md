@@ -6,6 +6,8 @@ A static site (no build step). Lives outside the realify-app repo, so deleting t
 - Preview locally: `python3 -m http.server 8765` in this folder, then open http://127.0.0.1:8765
 - Deploy to Vercel: `npx vercel` in this folder (framework "Other", no build command, output directory `.`).
 - Re-render films after editing `film/engine.js` or `film/film.html`: `node tools/render.mjs [A1 B2 ...]` (uses Playwright and its bundled ffmpeg from `apps/realifyai`).
+- Music: `python3 tools/make_music.py` writes original synthesised tracks to `music/`, then `node tools/add_music.mjs` (with the preview server running) muxes them into `v/*.webm`. The silent originals are kept in `film/silent/`. Re-rendering a film with `tools/render.mjs` makes it silent again, so run `add_music.mjs` after it.
+- `.vercelignore` keeps `music/`, `film/` and `tools/` out of the deploy.
 - Re-render the sample PDFs: `node tools/render_samples.mjs`.
 
 All figures in the films, samples and calculators are illustrative. The ROI Minds figures at the top of the page come from roiminds.com.
