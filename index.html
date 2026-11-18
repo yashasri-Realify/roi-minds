@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Realify for ROI Minds</title>
+<meta property="og:title" content="Realify for ROI Minds: where we start">
+<meta property="og:description" content="Eleven ways Realify's agents can work under ROI Minds' pods, each with a short film and what a 90-day pilot would deliver. Prepared for ROI Minds.">
+<meta property="og:image" content="v/A2.jpg">
+<link rel="icon" href="assets/realify-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Realify tokens (apps/realifyai/src/styles/tokens.css), light for the page, dark for the films */
+:root{
+  --bg:#FBFCFE; --surface:#FFFFFF; --soft:#F4F6FA; --ink:#0A0F1A; --ink2:#3F4858; --ink3:#5E6878;
+  --line:#E8ECF3; --line2:#D4DAE4; --acc:#0052EB; --acc-hover:#2168F2; --acc-soft:#E6EEFD; --on-acc:#FFFFFF;
+  --pos:#0B6B46; --cau:#9F5B06; --film:#070C1C; --shadow:0 18px 50px rgba(10,15,26,.14);
+  --sans:Inter,system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px 150px}
+h1,h2,h3,h4,p{margin:0}
+h1{font-weight:800;font-size:clamp(36px,5.2vw,58px);line-height:1.04;letter-spacing:-.035em;text-wrap:balance}
+h2{font-weight:800;font-size:clamp(28px,3.4vw,40px);line-height:1.08;letter-spacing:-.03em;text-wrap:balance}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+img{max-width:100%}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0 22px;border-bottom:1px solid var(--line)}
+.logo{height:30px;display:block}
+.logo.dk{display:none}
+.for{font:500 12px/1 var(--mono);letter-spacing:.16em;color:var(--ink3);text-transform:uppercase}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center;padding:64px 0 24px}
+.hero>*{min-width:0}
+.lede{margin-top:24px;font-size:19px;color:var(--ink3);max-width:34em}
+.lede b{color:var(--ink);font-weight:600}
+.stats{display:flex;flex-wrap:wrap;gap:6px 30px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column}
+.stats b{font:700 26px/1.1 var(--sans);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats span{font-size:12px;color:var(--ink3)}
+.steps{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--ink3)}
+.steps li{display:flex;gap:16px}
+.steps b{font:600 13px/1.9 var(--mono);color:var(--acc)}
+
+/* posters */
+.poster{position:relative;display:block;width:100%;padding:0;border:0;border-radius:18px;overflow:hidden;background:var(--film);box-shadow:var(--shadow);aspect-ratio:16/9;text-align:left}
+.poster img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.poster:hover img{transform:scale(1.025)}
+.poster .pl{position:absolute;left:18px;bottom:18px;display:inline-flex;align-items:center;gap:12px;max-width:calc(100% - 36px);background:rgba(255,255,255,.96);color:#0A0F1A;border-radius:999px;padding:9px 18px 9px 9px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.poster .pl i{flex:none;width:34px;height:34px;border-radius:50%;background:#0A0F1A;position:relative}
+.poster .pl i::after{content:"";position:absolute;left:13px;top:10px;border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.poster .pl em{font-style:normal;color:#5E6878;font-weight:500;white-space:nowrap}
+
+/* sections */
+section{padding-top:96px}
+.head{display:flex;flex-wrap:wrap;gap:16px 48px;align-items:flex-end;justify-content:space-between;margin-bottom:34px}
+.head>div,.head>p{min-width:0}
+.head>p{max-width:30em;color:var(--ink3)}
+.explore{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.explore>*{min-width:0}
+.grp{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 22px 8px}
+.grp+.grp{margin-top:18px}
+.gt{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-bottom:6px}
+.gt b{font-weight:700;font-size:21px;letter-spacing:-.02em}
+.gt em{font:600 11px/1 var(--mono);letter-spacing:.06em;font-style:normal;color:var(--acc);background:var(--acc-soft);padding:7px 11px;border-radius:999px}
+.gt span{flex-basis:100%;font-size:14px;color:var(--ink3)}
+.rows{list-style:none;margin:14px 0 0;padding:0}
+.row{display:flex;align-items:stretch;border-top:1px solid var(--line);border-radius:0}
+.row .pick{flex:1;min-width:0;text-align:left;background:none;border:0;padding:16px 4px;display:flex;flex-direction:column;gap:2px}
+.row .t{font-weight:600;font-size:16px}
+.row .h{font-size:14px;color:var(--ink3)}
+.row .m{font:500 11px/1.8 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.row.on .t{color:var(--acc)}
+.row.on{background:linear-gradient(90deg,var(--acc-soft),transparent 70%)}
+.chk{flex:none;align-self:center;width:36px;height:36px;border-radius:10px;border:1px solid var(--line2);background:var(--surface);font-size:20px;line-height:1;color:var(--acc)}
+.chk:hover{border-color:var(--acc)}
+.chk[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.chk[aria-disabled=true]{opacity:.4;cursor:not-allowed}
+.preview{position:sticky;top:20px;display:flex;flex-direction:column;gap:18px}
+.pilot{font-size:15px;color:var(--ink2);padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.pilot b{color:var(--ink);font-weight:600}
+.what{font-size:15px;color:var(--ink3)}
+.pvh{font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.pvt{font-weight:800;font-size:26px;line-height:1.15;letter-spacing:-.025em}
+.cap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.shortbtn{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line2);border-radius:12px;padding:12px 18px;font-weight:600;font-size:15px}
+.shortbtn:hover{border-color:var(--acc)}
+.shortbtn[aria-pressed=true]{background:var(--acc-soft);border-color:var(--acc);color:var(--acc)}
+.shortbtn[aria-disabled=true]{opacity:.45;cursor:not-allowed}
+.bx{width:18px;height:18px;border-radius:5px;border:2px solid currentColor;position:relative}
+.shortbtn[aria-pressed=true] .bx{background:var(--acc);border-color:var(--acc)}
+.shortbtn[aria-pressed=true] .bx::after{content:"";position:absolute;left:4px;top:0;width:5px;height:10px;border:solid var(--on-acc);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.linkbtn{background:none;border:0;padding:12px 4px;font-weight:600;color:var(--acc)}
+.linkbtn:hover{text-decoration:underline}
+
+/* calculators */
+.numbers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.numbers>div{min-width:0;display:flex;flex-direction:column}
+.nt{font-weight:700;font-size:22px;letter-spacing:-.02em}
+.nd{color:var(--ink3);font-size:15px;margin:4px 0 16px}
+.calc{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:22px}
+.calc h4{font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.inputs{display:flex;flex-direction:column;gap:16px}
+.inputs label{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--ink2)}
+.inputs label span{display:flex;justify-content:space-between;gap:12px}
+.inputs output{font:600 14px/1 var(--mono);color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.mode{display:flex;flex-wrap:wrap;gap:8px}
+.mode button{border:1px solid var(--line2);background:none;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:500}
+.mode button[aria-pressed=true]{background:var(--acc-soft);border-color:var(--acc);color:var(--acc);font-weight:600}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid var(--line);padding-top:20px}
+.results div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.results b{font-weight:800;font-size:28px;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.1}
+.results span{font-size:12px;color:var(--ink3);line-height:1.4}
+.fine{font-size:12px;color:var(--ink3)}
+
+/* terms + samples */
+.terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:30px;border-top:1px solid var(--line2)}
+.terms>div{padding:24px 24px 0 0}
+.terms b{display:block;font-weight:700;font-size:17px;letter-spacing:-.01em;margin-bottom:8px}
+.terms p{font-size:14px;color:var(--ink3)}
+.samples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:30px}
+.sample{display:flex;gap:22px;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;align-items:center;transition:border-color .2s,box-shadow .2s}
+.sample:hover{border-color:var(--acc);box-shadow:var(--shadow)}
+.sample img{flex:none;width:150px;border-radius:8px;border:1px solid var(--line);display:block}
+.sample div{min-width:0}
+.sample b{display:block;font-weight:700;font-size:18px;letter-spacing:-.015em;margin-bottom:6px}
+.sample p{font-size:14px;color:var(--ink3);margin-bottom:10px}
+.sample span{font-weight:600;font-size:14px;color:var(--acc)}
+.foot{margin-top:84px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--ink3)}
+
+/* shortlist bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:14px 24px calc(14px + env(safe-area-inset-bottom,0px))}
+.bar .in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+.bar .list{flex:1 1 320px;min-width:0;font-size:15px;color:var(--ink3)}
+.bar .list b{color:var(--ink)}
+.btn{display:inline-block;border-radius:12px;padding:13px 22px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line2);background:var(--surface);color:var(--ink)}
+.btn.acc{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.btn.acc:hover{background:var(--acc-hover);border-color:var(--acc-hover)}
+.btn[aria-disabled=true]{opacity:.4;pointer-events:none}
+
+/* film dialog */
+dialog{border:0;padding:0;border-radius:22px;max-width:min(1000px,calc(100vw - 32px));width:100%;background:var(--surface);color:var(--ink);box-shadow:0 40px 100px rgba(0,0,0,.5);overflow:visible}
+dialog::backdrop{background:rgba(7,12,28,.72);backdrop-filter:blur(4px)}
+.dlg{position:relative;max-height:calc(100vh - 48px);overflow:auto;border-radius:22px}
+.dlg .media{background:var(--film);aspect-ratio:16/9}
+.dlg video{width:100%;height:100%;display:block;background:var(--film)}
+.dlg .body{padding:26px 30px 30px;display:flex;flex-direction:column;gap:14px}
+.dlg .cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.dlg .x{position:absolute;left:14px;top:14px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:rgba(7,12,28,.7);color:#fff;font-size:22px;line-height:1}
+
+@media (max-width:900px){
+  .hero,.explore,.numbers,.samples{grid-template-columns:minmax(0,1fr)}
+  .hero{gap:32px;padding-top:40px}
+  .terms{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .preview{position:static}
+  section{padding-top:72px}
+}
+@media (max-width:560px){
+  .wrap,.bar{padding-left:16px;padding-right:16px}
+  .results,.terms,.dlg .cols{grid-template-columns:minmax(0,1fr)}
+  .sample{flex-direction:column;align-items:flex-start}.sample img{width:100%}
+  .poster .pl{font-size:13px}.poster .pl em{display:none}
+}
+@media (prefers-reduced-motion:reduce){.poster img{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <img class="logo" src="assets/realify-logo-dark.png" alt="Realify">
+    <span class="for">Prepared for ROI Minds</span>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Where we start</p>
+      <h1 style="margin-top:20px">Where should Realify start for ROI Minds?</h1>
+      <p class="lede">Your pods already run growth for brands across Google, Meta and marketplaces. <b>Realify's agents work underneath them: they decide what to do next, act inside the limits your managers set, and record what each move earned.</b></p>
+      <div class="stats" aria-label="ROI Minds, as stated on roiminds.com">
+        <div><b>$300m+</b><span>eCom revenue</span></div>
+        <div><b>250+</b><span>brands scaled</span></div>
+        <div><b>7+</b><span>years</span></div>
+      </div>
+      <ol class="steps">
+        <li><b>01</b>Browse eleven starting points, grouped in four goals.</li>
+        <li><b>02</b>Open any one for a film of about half a minute and what a 90-day pilot delivers.</li>
+        <li><b>03</b>Add up to three to your shortlist and send it to us.</li>
+      </ol>
+    </div>
+    <button class="poster" type="button" id="feat" aria-label="Play: Four signals, one plan"><img src="v/A2.jpg" alt=""><span class="pl"><i></i>The idea in 30 seconds: four signals, one plan</span></button>
+  </div>
+
+  <section aria-labelledby="ex">
+    <div class="head">
+      <div><p class="eyebrow">Eleven starting points</p><h2 id="ex" style="margin-top:16px">Pick the three that matter most</h2></div>
+      <p>Hover or tap any starting point to preview it; open it for the film, what it does for ROI Minds and what a pilot delivers.</p>
+    </div>
+    <div class="explore">
+      <div id="rows"></div>
+      <div class="preview" aria-live="polite">
+        <button class="poster" type="button" id="pv" aria-label="Play film"><img id="pvimg" alt="" src="v/A1.jpg"><span class="pl"><i></i><span id="pvpl"></span><em id="pvlen"></em></span></button>
+        <div><p class="pvh" id="pvag"></p><h3 class="pvt" id="pvt" style="margin-top:10px"></h3></div>
+        <p class="what" id="pvwhat"></p>
+        <p class="pilot" id="pvpilot"></p>
+        <div class="cap">
+          <button class="shortbtn" type="button" id="pvadd" aria-pressed="false"><span class="bx" aria-hidden="true"></span><span id="pvlb">Add to shortlist</span></button>
+          <button class="linkbtn" type="button" id="pvopen">Open details and film →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="nm">
+    <div class="head">
+      <div><p class="eyebrow">Run your own numbers</p><h2 id="nm" style="margin-top:16px">What it could mean for ROI Minds</h2></div>
+      <p>Indicative only. Every input is an assumption you can move. A shared baseline from your own client reports replaces all of them in the first weeks of a pilot.</p>
+    </div>
+    <div class="numbers">
+      <div>
+        <p class="nt">Brands per account manager</p>
+        <p class="nd">How many brands one manager could carry when agents take the routine work.</p>
+        <div class="calc">
+          <h4>Your capacity, on your numbers</h4>
+          <div class="inputs">
+            <label for="c1b"><span>Brands per manager today <output id="o1b"></output></span><input id="c1b" type="range" min="2" max="20" step="1" value="6"></label>
+            <label for="c1s"><span>Active SKUs per brand <output id="o1s"></output></span><input id="c1s" type="range" min="25" max="2000" step="25" value="300"></label>
+            <label for="c1c"><span>Channels per brand <output id="o1c"></output></span><input id="c1c" type="range" min="1" max="6" step="1" value="3"></label>
+            <label for="c1h"><span>Routine hours per manager, weekly <output id="o1h"></output></span><input id="c1h" type="range" min="4" max="36" step="1" value="24"></label>
+            <div class="mode" role="group" aria-label="Agent mode">
+              <button type="button" id="m1a" aria-pressed="true">Assist: agents prepare</button>
+              <button type="button" id="m1b" aria-pressed="false">Act: agents apply inside limits</button>
+            </div>
+          </div>
+          <div class="results">
+            <div><b id="r1a"></b><span>decisions a day, one manager's brands</span></div>
+            <div><b id="r1b"></b><span>a week back to each manager</span></div>
+            <div><b id="r1c"></b><span>brands per manager</span></div>
+          </div>
+          <p class="fine">Decisions = SKUs × channels × 5 levers, daily. 40-hour week; judgement time per brand unchanged; agents remove 50% (Assist) or up to 80% (Act) of routine work. Indicative; your baseline replaces every input.</p>
+        </div>
+      </div>
+      <div>
+        <p class="nt">Ad spend that cannot earn</p>
+        <p class="nd">What Marketer could move when ads run on products that are out of stock or below their margin floor.</p>
+        <div class="calc">
+          <h4>What redirecting it could be worth</h4>
+          <div class="inputs">
+            <label for="c2s"><span>Ad spend managed on marketplaces, monthly <output id="o2s"></output></span><input id="c2s" type="range" min="50000" max="5000000" step="50000" value="1000000"></label>
+            <label for="c2p"><span>Share on products out of stock or under floor <output id="o2p"></output></span><input id="c2p" type="range" min="1" max="15" step="1" value="4"></label>
+            <label for="c2r"><span>Share Marketer moves to products that earn <output id="o2r"></output></span><input id="c2r" type="range" min="20" max="100" step="5" value="60"></label>
+          </div>
+          <div class="results">
+            <div><b id="r2a"></b><span>a month on products that cannot earn</span></div>
+            <div><b id="r2b"></b><span>a month moved to products that do</span></div>
+            <div><b id="r2c"></b><span>a year, redirected</span></div>
+          </div>
+          <p class="fine">Spend moved is budget redirected, not revenue gained. The defaults are placeholders, not ROI Minds' data. A 30-day look at one client's own reports replaces both shares with measured ones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="tg">
+    <p class="eyebrow">How we'd work together</p>
+    <h2 id="tg" style="margin-top:16px">Under your name, paid for by results</h2>
+    <div class="terms">
+      <div><b>Under ROI Minds</b><p>Realify reads the data your pods already use and works underneath your reporting. Clients see ROI Minds.</p></div>
+      <div><b>Outcomes, not seats</b><p>Recovery is paid from money recovered; agent work is priced per brand or per decision applied.</p></div>
+      <div><b>90 days, clean exit</b><p>A few brands, your baselines, agents in Assist first. If it isn't working by day 90, we part cleanly.</p></div>
+      <div><b>Each brand in its own vault</b><p>Isolated at the database level and trained only on its own data. Nothing crosses brands.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="sm">
+    <p class="eyebrow">To read</p>
+    <h2 id="sm" style="margin-top:16px">Two samples</h2>
+    <div class="samples">
+      <a class="sample" href="samples/Realify-24-hour-audit-sample.pdf" target="_blank" rel="noopener"><img loading="lazy" src="samples/audit.png" alt="First page of the sample audit"><div><b>The 24-hour audit</b><p>What a prospect receives the day after sending their reports. Illustrative data. 1 page.</p><span>Open the PDF →</span></div></a>
+      <a class="sample" href="samples/Realify-weekly-client-note-sample.pdf" target="_blank" rel="noopener"><img loading="lazy" src="samples/note.png" alt="Sample weekly client note"><div><b>A weekly client note</b><p>What a brand owner reads on Monday: what changed and what it earned. Illustrative data. 1 page.</p><span>Open the PDF →</span></div></a>
+    </div>
+  </section>
+
+  <p class="foot">Prepared for ROI Minds. All figures in the films, samples and calculators are illustrative unless stated; the ROI Minds figures at the top are as published on roiminds.com.</p>
+</div>
+
+<div class="bar" role="region" aria-label="Your shortlist">
+  <div class="in">
+    <span class="list" id="barlist"></span>
+    <a class="btn acc" id="send" href="#" aria-disabled="true">Send my shortlist to Realify</a>
+  </div>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt"><div class="dlg">
+  <button class="x" type="button" aria-label="Close">×</button>
+  <div class="media"><video id="dv" controls playsinline preload="none"></video></div>
+  <div class="body">
+    <p class="pvh" id="dag"></p>
+    <h3 class="pvt" id="dt"></h3>
+    <div class="cols"><div><p class="pvh" style="color:var(--ink3)">What it does for ROI Minds</p><p class="what" id="dwhat" style="margin-top:8px"></p></div><div><p class="pvh" style="color:var(--ink3)">What a 90-day pilot delivers</p><p class="what" id="dpilot" style="margin-top:8px"></p></div></div>
+    <div class="cap"><button class="shortbtn" type="button" id="dadd" aria-pressed="false"><span class="bx" aria-hidden="true"></span><span id="dlb">Add to shortlist</span></button></div>
+  </div>
+</div></dialog>
+
+<script>
+(function () {
+  var GROUPS = [
+    { name: "More brands per account manager", note: "Agents take the routine work; your managers make the calls.", items: [
+      { id: "A1", len: 30, t: "One queue for every brand", h: "Agents work every brand overnight; managers approve in a click.", ag: "Marketer · Pricer · Planner · Controller",
+        what: "Each client's price, ad, stock and fee decisions arrive as one ranked queue instead of four tools. Managers approve, edit or reject; nothing leaves a brand's limits.",
+        pilot: "Two or three client brands with the agents from week one. We baseline brands per manager and routine hours together, then measure the change." },
+      { id: "A2", len: 30, t: "Four signals, one plan", h: "Price, ads, stock and listing weighed together, not in four dashboards.", ag: "Marketer · Pricer · Planner",
+        what: "An ad push on a product about to stock out, or a price cut on one already at its margin floor, is caught before it runs.",
+        pilot: "One client brand where the four signals are already connected. We list every conflict the agents would have stopped, with the product and the date." },
+      { id: "A3", len: 28, t: "Every decision scored", h: "Each move graded against its own forecast at day 30.", ag: "All agents",
+        what: "Every action carries its forecast when it is made and its result 30 days later, so a manager can show a client what each change earned.",
+        pilot: "A scorecard per brand: decisions made, forecast against actual, and the ones that missed." }
+    ]},
+    { name: "Profit behind the ROAS", note: "Your approach is profitable ROAS. These work on the margin underneath it.", items: [
+      { id: "B1", len: 32, t: "Ads that respect margin and stock", h: "No spend on products that cannot earn; budget follows the Buy Box.", ag: "Marketer",
+        what: "Campaigns are checked against landed margin, stock cover and Buy Box status each day. Spend on products that are out of stock or below their floor is paused or moved.",
+        pilot: "A list of ad spend on products that could not earn, found in the first reports, then Marketer working it in Assist." },
+      { id: "B2", len: 30, t: "True margin per client", h: "Contribution margin after fees, ads and landed cost, not just ROAS.", ag: "Controller",
+        what: "A margin ladder per brand and channel: revenue, then cost of goods, fees, ads and returns. A client conversation moves from ROAS to what the brand keeps.",
+        pilot: "A margin view for each pilot brand from its own Amazon, Shopify or Walmart reports, with every missing input named." },
+      { id: "B3", len: 30, t: "Fees recovered, claims filed", h: "Overcharges found against the schedule and claimed with evidence.", ag: "Controller",
+        what: "Controller checks fulfilment fees against the published schedule and files claims with the evidence attached. Amazon-selling clients get recovered cash without extra work for your team.",
+        pilot: "A first audit on one client's settlement reports: what was overcharged, what is claimable, and what the evidence is." },
+      { id: "B4", len: 28, t: "Price inside your floors", h: "Hold, meet halfway or match, decided on margin and stock.", ag: "Pricer",
+        what: "Price moves respect floors a manager sets per brand. Pricer proposes; the manager decides, or lets it act inside the floor.",
+        pilot: "Floors agreed for one brand, then Pricer proposing in Assist. We count moves proposed, approved and held." }
+    ]},
+    { name: "Be found where buying starts", note: "AI search is already part of what you sell. This is the proof underneath it.", items: [
+      { id: "C1", len: 32, t: "Chosen by AI shoppers", h: "Listings assistants can read, and share of answer tracked.", ag: "Analyst",
+        what: "Client listings are read the way an AI shopping assistant reads them, and gaps are listed. Share of answer is tracked over time next to your AI search reporting.",
+        pilot: "An AI-readiness read of three public listings for one client, with the gaps ranked." },
+      { id: "C2", len: 28, t: "A weekly note per client", h: "What changed, and what it earned, written for the brand owner.", ag: "Analyst",
+        what: "Each client receives a short note drawn from the decision record: what the agents and your team changed this week and what those changes earned so far.",
+        pilot: "Four weekly notes for each pilot brand, reviewed by your account manager before they go out." }
+    ]},
+    { name: "Win and grow clients", note: "The same engine can audit prospects and show one margin view across channels.", items: [
+      { id: "D1", len: 32, t: "Prospect audit in 24 hours", h: "Reports in; margin, fees, ad waste and stock out, the next day.", ag: "Analyst · Controller",
+        what: "A prospect sends their marketplace and ad reports; the next day you have margin, fees, ad waste and stock issues in one document. It sits beside your Performance Audit.",
+        pilot: "Audits on a few real prospects, turnaround timed from the day the reports arrive." },
+      { id: "D2", len: 30, t: "One P&L across channels", h: "Amazon, Shopify and Walmart on one margin view.", ag: "Controller",
+        what: "A client selling on several channels sees one margin view instead of three exports, with the same cost and fee rules applied to each.",
+        pilot: "One multi-channel pilot brand with its channels on one margin view and every difference between channels explained." }
+    ]}
+  ];
+  var ALL = []; GROUPS.forEach(function (g) { g.items.forEach(function (i) { ALL.push(i); }); });
+  var MAX = 3, sel = [], cur = 'A1';
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function byId(id) { return ALL.filter(function (i) { return i.id === id; })[0]; }
+
+  $('rows').innerHTML = GROUPS.map(function (g) {
+    return '<div class="grp"><div class="gt"><b>' + esc(g.name) + '</b><em>' + g.items.length + ' starting points</em><span>' + esc(g.note) + '</span></div><ul class="rows" role="list">' +
+      g.items.map(function (i) {
+        return '<li class="row" data-id="' + i.id + '"><button class="pick" type="button"><span class="t">' + esc(i.t) + '</span><span class="h">' + esc(i.h) + '</span><span class="m">Film · ' + i.len + ' s</span></button>' +
+          '<button class="chk" type="button" aria-pressed="false" title="Add to shortlist" aria-label="Add ' + esc(i.t) + ' to shortlist">+</button></li>';
+      }).join('') + '</ul></div>';
+  }).join('');
+
+  function toggle(id) { var k = sel.indexOf(id); if (k >= 0) sel.splice(k, 1); else if (sel.length < MAX) sel.push(id); render(); }
+  $('rows').addEventListener('click', function (e) {
+    var row = e.target.closest('.row'); if (!row) return;
+    var id = row.getAttribute('data-id');
+    if (e.target.closest('.chk')) toggle(id); else { cur = id; render(); if (window.matchMedia('(max-width:900px)').matches) openFilm(id); }
+  });
+  $('rows').addEventListener('mouseover', function (e) { var row = e.target.closest('.row'); if (row && row.getAttribute('data-id') !== cur && window.matchMedia('(hover:hover)').matches) { cur = row.getAttribute('data-id'); render(); } });
+  $('pvadd').addEventListener('click', function () { toggle(cur); });
+  $('pv').addEventListener('click', function () { openFilm(cur); });
+  $('pvopen').addEventListener('click', function () { openFilm(cur); });
+  $('feat').addEventListener('click', function () { openFilm('A2'); });
+
+  var send = $('send'), barlist = $('barlist');
+  function render() {
+    var full = sel.length >= MAX;
+    Array.prototype.forEach.call($('rows').querySelectorAll('.row'), function (row) {
+      var id = row.getAttribute('data-id'), on = sel.indexOf(id) >= 0, chk = row.querySelector('.chk');
+      row.classList.toggle('on', id === cur);
+      chk.setAttribute('aria-pressed', on ? 'true' : 'false'); chk.textContent = on ? '✓' : '+';
+      chk.setAttribute('aria-disabled', (!on && full) ? 'true' : 'false');
+      chk.title = on ? 'Remove from shortlist' : (full ? 'Shortlist is full (three)' : 'Add to shortlist');
+    });
+    var it = byId(cur), on = sel.indexOf(cur) >= 0;
+    $('pvimg').src = 'v/' + cur + '.jpg';
+    $('pvpl').textContent = it.t; $('pvlen').textContent = it.len + ' s';
+    $('pvag').textContent = 'Agents: ' + it.ag; $('pvt').textContent = it.t; $('pvwhat').textContent = it.what;
+    $('pvpilot').innerHTML = '<b>In a 90-day pilot:</b> ' + esc(it.pilot);
+    var add = $('pvadd'); add.setAttribute('aria-pressed', on ? 'true' : 'false'); add.setAttribute('aria-disabled', (!on && full) ? 'true' : 'false');
+    $('pvlb').textContent = on ? 'On your shortlist' : (full ? 'Shortlist is full' : 'Add to shortlist');
+    if (!sel.length) barlist.innerHTML = '<b>Your shortlist is empty.</b> Add up to three starting points, then send it to us.';
+    else barlist.innerHTML = '<b>Your shortlist (' + sel.length + ' of ' + MAX + '):</b> ' + sel.map(function (id) { return esc(byId(id).t); }).join(' · ');
+    var body = 'Hello Realify team,\n\nWhere ROI Minds would like to start:\n' + sel.map(function (id) { return '- ' + byId(id).t; }).join('\n') + '\n\nThe brands we have in mind:\n';
+    send.href = sel.length ? 'mailto:shiva@realify.ai?subject=' + encodeURIComponent('ROI Minds × Realify: our shortlist') + '&body=' + encodeURIComponent(body) : '#';
+    send.setAttribute('aria-disabled', sel.length ? 'false' : 'true');
+    if ($('dlg').open) paintDialog();
+  }
+  send.addEventListener('click', function (e) { if (!sel.length) e.preventDefault(); });
+
+  /* film dialog */
+  var dlg = $('dlg'), dv = $('dv'), dcur = null;
+  function paintDialog() {
+    var it = byId(dcur), on = sel.indexOf(dcur) >= 0, full = sel.length >= MAX;
+    $('dag').textContent = 'Agents: ' + it.ag; $('dt').textContent = it.t; $('dwhat').textContent = it.what; $('dpilot').textContent = it.pilot;
+    var add = $('dadd'); add.setAttribute('aria-pressed', on ? 'true' : 'false'); add.setAttribute('aria-disabled', (!on && full) ? 'true' : 'false');
+    $('dlb').textContent = on ? 'On your shortlist' : (full ? 'Shortlist is full' : 'Add to shortlist');
+  }
+  function openFilm(id) {
+    dcur = id; cur = id; paintDialog();
+    dv.poster = 'v/' + id + '.jpg'; dv.src = 'v/' + id + '.webm';
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+    var p = dv.play(); if (p && p.catch) p.catch(function () { /* the viewer presses play */ });
+    render();
+  }
+  function closeFilm() { dv.pause(); dv.removeAttribute('src'); dv.load(); dlg.close(); }
+  $('dadd').addEventListener('click', function () { toggle(dcur); });
+  dlg.querySelector('.x').addEventListener('click', closeFilm);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) closeFilm(); });
+  dlg.addEventListener('close', function () { dv.pause(); });
+
+  /* calculators */
+  function nf(n) { return Math.round(n).toLocaleString('en-US'); }
+  function money(n) { return n >= 1e6 ? '$' + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace(/\.0$/, '') + 'M' : n >= 1e3 ? '$' + Math.round(n / 1e3) + 'K' : '$' + Math.round(n); }
+  var act = false;
+  function calc1() {
+    var b = +$('c1b').value, s = +$('c1s').value, c = +$('c1c').value, h = +$('c1h').value;
+    $('o1b').textContent = b; $('o1s').textContent = nf(s); $('o1c').textContent = c; $('o1h').textContent = h + ' h';
+    var saved = h * (act ? 0.8 : 0.5), nb = b * 40 / (40 - saved);
+    $('r1a').textContent = nf(s * c * 5 * b); $('r1b').textContent = Math.round(saved) + ' h'; $('r1c').textContent = b + ' → ' + nb.toFixed(1);
+  }
+  function calc2() {
+    var sp = +$('c2s').value, p = +$('c2p').value, r = +$('c2r').value;
+    $('o2s').textContent = money(sp); $('o2p').textContent = p + '%'; $('o2r').textContent = r + '%';
+    var bad = sp * p / 100, moved = bad * r / 100;
+    $('r2a').textContent = money(bad); $('r2b').textContent = money(moved); $('r2c').textContent = money(moved * 12);
+  }
+  ['c1b', 'c1s', 'c1c', 'c1h'].forEach(function (id) { $(id).addEventListener('input', calc1); });
+  ['c2s', 'c2p', 'c2r'].forEach(function (id) { $(id).addEventListener('input', calc2); });
+  $('m1a').addEventListener('click', function () { act = false; $('m1a').setAttribute('aria-pressed', 'true'); $('m1b').setAttribute('aria-pressed', 'false'); calc1(); });
+  $('m1b').addEventListener('click', function () { act = true; $('m1b').setAttribute('aria-pressed', 'true'); $('m1a').setAttribute('aria-pressed', 'false'); calc1(); });
+  render(); calc1(); calc2();
+})();
+</script>
+</body>
+</html>

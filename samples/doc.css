@@ -1,0 +1,20 @@
+:root{--ink:#0A0F1A;--ink2:#3F4858;--ink3:#5E6878;--line:#D4DAE4;--acc:#0052EB;--pos:#0B6B46;--cau:#9F5B06;--soft:#F4F6FA}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0}
+body{width:816px;height:1056px;font-family:Inter,system-ui,sans-serif;color:var(--ink);font-size:13px;line-height:1.5;position:relative;padding:48px 56px;background:#fff}
+.top{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.top img{height:26px}.tag{font:500 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:var(--ink3);border:1px solid var(--line);padding:6px 9px;border-radius:5px}
+.eyebrow{font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-top:26px}
+h1{font-size:30px;line-height:1.1;letter-spacing:-.03em;font-weight:800;margin-top:10px}
+.sub{color:var(--ink3);margin-top:8px;max-width:560px}
+h2{font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:20px 0 8px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:6px 0;border-top:1px solid var(--line);font-size:13px}th{font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);border-top:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+.card{background:var(--soft);border-radius:10px;padding:14px 16px}.card b{display:block;font-size:24px;letter-spacing:-.03em;font-weight:800}.card span{font-size:11px;color:var(--ink3)}
+.read{background:#E6F4EE;border:1px solid #9AD6B8;border-radius:10px;padding:14px 18px;margin-top:22px}.read b{color:var(--pos)}
+ul{padding-left:18px;margin-top:6px}li{margin:3px 0}
+.foot{position:absolute;left:56px;right:56px;bottom:30px;font-size:10px;color:var(--ink3);border-top:1px solid var(--line);padding-top:10px}
+.warn{color:var(--cau)}
+.item{display:flex;gap:16px;padding:12px 0;border-top:1px solid var(--line)}.item>b{width:64px;color:var(--acc)}.item p{font-weight:600}.item span{color:var(--ink2);font-size:12px}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);padding-top:12px;margin-top:6px}.total b{font-size:28px;letter-spacing:-.03em;color:var(--pos)}
